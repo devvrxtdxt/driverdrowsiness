@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>AI Assistant</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ask your question here">
+        <input type="submit" value="Submit">
+    </form>
+    {% if submitted_text %}
+        <h2>Your question:</h2>
+        <p>{{ submitted_text }}</p>
+    {% endif %}
+    {% if ai_response %}
+        <h2>AI Response:</h2>
+        <p>{{ ai_response }}</p>
+    {% endif %}
+</body>
+</html>

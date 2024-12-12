@@ -1,0 +1,1 @@
+content = input("enter the content you want to write : ")
